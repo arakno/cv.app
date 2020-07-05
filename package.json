@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "start": "snowpack dev --port 3000",
+    "build": "rm -rf build/ && snowpack build",
+    "test": "echo \"This template does not include a test runner by default.\" && exit 1",
+    "format": "prettier --write \"src/**/*.js\"",
+    "lint": "prettier --check \"src/**/*.js\"",
+    "run:css": "postcss src/scss/**/[^_]*.scss --dir public/css --ext css",
+    "run:css::watch": "$1 --watch"
+  },
+  "dependencies": {
+    "bulma": "^0.9.0",
+    "holderjs": "^2.9.7",
+    "localforage": "^1.7.4",
+    "print-js": "^1.0.63",
+    "sortablejs": "^1.10.2"
+  },
+  "devDependencies": {
+    "@csstools/postcss-sass": "^4.0.0",
+    "autoprefixer": "^9.8.4",
+    "postcss-cli": "^7.1.1",
+    "postcss-scss": "^2.1.1",
+    "prettier": "^2.0.0",
+    "snowpack": "^2.2.0"
+  }
+}
