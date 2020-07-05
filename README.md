@@ -1,4 +1,5 @@
 # New Project
+An online CV generator inspired on stackoverflow CV builder.
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
