@@ -1,5 +1,6 @@
 import print from 'print-js';
 import Sortable from 'sortablejs'
+
 import { Experience, Education } from './templates'
 
 window.addEventListener('DOMContentLoaded', () => {
