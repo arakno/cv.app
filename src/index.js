@@ -1,6 +1,7 @@
 import print from 'print-js';
 import Sortable from 'sortablejs'
-import holderjs from 'http://unpkg.com/holderjs'
+// TODO: look for alternative
+// import holderjs from 'http://unpkg.com/holderjs' 
 
 import { Experience, Education } from './templates'
 
@@ -99,7 +100,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   cv.on('click', (evt) => {
     const isButton = evt.target.nodeName === 'BUTTON'
-    debugger
     if (!isButton) {
       return
     }
