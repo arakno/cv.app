@@ -1,5 +1,7 @@
-# New Project
+# CV Builder
+
 An online CV generator inspired on stackoverflow CV builder.
+You can find it on http://cv.arakno.net
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
