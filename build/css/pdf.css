@@ -54,6 +54,10 @@ table, img, svg {
 }
 */
 
+button > * {
+  pointer-events: none;
+}
+
 
 .fs-category.has-border {
   width: 100%;
