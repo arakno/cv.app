@@ -1,11 +1,11 @@
 {
   "name": "cv-builder",
-  "version": "0.1.1-alpha",
+  "version": "0.2.0",
   "description": "An online CV generator",
   "main": "src/index.js",
   "homepage": "https://cv.arakno.net",
-  "url" : "https://github.com/arakno/cv.app/issues",
-  "email" : "pbasto@arakno.net",
+  "url": "https://github.com/arakno/cv.app/issues",
+  "email": "pbasto@arakno.net",
   "author": "pbasto",
   "scripts": {
     "start": "snowpack dev --port 3000",
