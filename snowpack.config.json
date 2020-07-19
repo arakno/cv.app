@@ -2,7 +2,7 @@
   "scripts": {
     "mount:public": "mount public --to /",
     "mount:src": "mount src --to /_dist_",
-    "run:css": "postcss src/scss/**/[^_]*.scss --dir build/css --ext css",
+    "run:css": "postcss src/scss/**/[^_]*.scss --dir public/css --ext css",
     "run:css::watch": "$1 --watch"
   },
   "plugins": [],
