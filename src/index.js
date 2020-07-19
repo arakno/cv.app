@@ -75,6 +75,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const primaryCSS = document.createElement('link')
     primaryCSS.href = `${PATHS.css}index.css`
     primaryCSS.rel = 'stylesheet'
+    primaryCSS.media = 'print'
     primaryCSS.type = 'text/css'
     const secondaryCSS = document.createElement('link')
     secondaryCSS.href = `${PATHS.css}primary.css`
@@ -82,7 +83,7 @@ window.addEventListener('DOMContentLoaded', () => {
     secondaryCSS.type = 'text/css'
     const tertiaryCSS = document.createElement('link')
     tertiaryCSS.href = `${PATHS.css}pdf.css`
-    tertiaryCSS.media = 'print'
+    // tertiaryCSS.media = 'print'
     tertiaryCSS.rel = 'stylesheet'
     tertiaryCSS.type = 'text/css'
 

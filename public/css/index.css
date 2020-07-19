@@ -14298,10 +14298,6 @@ section article {
     display: none;
   }
 
-  input[type=checkbox] + section {
-    display: none;
-  }
-
   button.add-btn, #print-btn {
     display: none;
   }
