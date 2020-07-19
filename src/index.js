@@ -3,7 +3,7 @@ import Sortable from 'sortablejs'
 // TODO: look for alternative
 // import holderjs from 'http://unpkg.com/holderjs' 
 
-import { Experience, Education } from './templates'
+import { Experience, Education, Certification } from './templates'
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -57,9 +57,13 @@ window.addEventListener('DOMContentLoaded', () => {
   // Add visible/hidden checkboxes to each experience
 	for (let experience of experiences) {
     let input = document.createElement('input')
+    let label = document.createElement('label')
     input.type = 'checkbox'
+    input.id = 'selected-section'
+    label.for = 'selected-section'
     // experience.insertBefore(input, experience)
     // experience.prepend(input)
+    // input.appendChild(label)
     experience.parentNode.insertBefore(input, experience)
   }
   
@@ -96,7 +100,7 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       // window.frames['print_frame'].focus();
       // window.frames['print_frame'].print();
-window.print()
+      window.print()
     }, 500)
   })
 
@@ -108,11 +112,25 @@ window.print()
 
     if (evt.target.classList.contains('add-btn')) {
       let section = evt.target.closest('section')
-      section.insertAdjacentHTML('beforeend', Experience)
+console.log(section)
+
+      switch(section.id) {
+        case 'cv-Experience':
+          section.insertAdjacentHTML('beforeend', Experience)
+          break;
+        case 'cv-Education':
+          section.insertAdjacentHTML('beforeend', Education)
+          break;
+        case 'cv-Certifications':
+          section.insertAdjacentHTML('beforeend', Certification)
+          break;
+        default:
+          break;
+      }
       // section.nextElementSibling.insertAdjacentHTML('beforeend', Experience)
       // console.dir(evt.target.id)
     }
-    setupDnD()
+    
   })
 
   // Drag n Drop functionality
@@ -122,12 +140,28 @@ window.print()
       animation: 150 
     })
 
-    const educationList = cv.querySelector('.education')
+    const educationList = cv.querySelector('.education');
     Sortable.create(educationList, { 
       animation: 150 
     })
 
+    // for ( el of experienceList) {
+    //   // function (a) {
+    //     Sortable.create(el, {group: 'photo',animation: 150 });
+    //   // });
+    // }
+    
+    // [].forEach.call( educationList, function (el) {
+    //     Sortable.create(el, {group: 'photo',animation: 150 });
+    //   });
+
   }
+    
+//   $(document).on('click', '.add-el', function(){
+//     var n = $('.list img').length + 1;
+//     var template = `<img src="http://placehold.it/50x50&text=${n}">`;
+//     list.append(template);
+// });
 
   setupDnD()
 
