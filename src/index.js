@@ -72,30 +72,31 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const printBtn = document.getElementById('print-btn')
   printBtn.on('click', () => {
-    const primaryCSS = document.createElement('link')
-    primaryCSS.href = `${PATHS.css}index.css`
-    primaryCSS.rel = 'stylesheet'
-    primaryCSS.media = 'print'
-    primaryCSS.type = 'text/css'
-    const secondaryCSS = document.createElement('link')
-    secondaryCSS.href = `${PATHS.css}primary.css`
-    secondaryCSS.rel = 'stylesheet'
-    secondaryCSS.type = 'text/css'
-    const tertiaryCSS = document.createElement('link')
-    tertiaryCSS.href = `${PATHS.css}pdf.css`
-    // tertiaryCSS.media = 'print'
-    tertiaryCSS.rel = 'stylesheet'
-    tertiaryCSS.type = 'text/css'
+    // const primaryCSS = document.createElement('link')
+    // primaryCSS.href = `${PATHS.css}index.css`
+    // primaryCSS.rel = 'stylesheet'
+    // primaryCSS.media = 'print'
+    // primaryCSS.type = 'text/css'
+    // const secondaryCSS = document.createElement('link')
+    // secondaryCSS.href = `${PATHS.css}primary.css`
+    // secondaryCSS.rel = 'stylesheet'
+    // secondaryCSS.type = 'text/css'
+    // const tertiaryCSS = document.createElement('link')
+    // tertiaryCSS.href = `${PATHS.css}pdf.css`
+    // // tertiaryCSS.media = 'print'
+    // tertiaryCSS.rel = 'stylesheet'
+    // tertiaryCSS.type = 'text/css'
 
-    const doc = document.getElementById('print_frame').contentWindow.document;
-    doc.head.appendChild(primaryCSS);
-    doc.head.appendChild(secondaryCSS);
-    doc.head.appendChild(tertiaryCSS);
-    doc.body.innerHTML = document.getElementById('cv').innerHTML
+    // const doc = document.getElementById('print_frame').contentWindow.document;
+    // doc.head.appendChild(primaryCSS);
+    // doc.head.appendChild(secondaryCSS);
+    // doc.head.appendChild(tertiaryCSS);
+    // doc.body.innerHTML = document.getElementById('cv').innerHTML
 
     setTimeout(() => {
-      window.frames['print_frame'].focus();
-      window.frames['print_frame'].print();
+      // window.frames['print_frame'].focus();
+      // window.frames['print_frame'].print();
+window.print()
     }, 500)
   })
 
