@@ -74,13 +74,18 @@ section article {
 }
 
 @media print {
-  input[type="checkbox"], input[type="checkbox"]:checked + article {
+	input[type="checkbox"] {
     display: none;
-  }
+	}
 
-  button.add-btn {
+  button.add-btn, #print-btn {
     display: none;
-  }
+	}
+	
+	input[type="checkbox"]:checked + article,
+	input[type="checkbox"]:checked + section {
+		display: none;
+	}
 }
 
 /* checkbox aspect */
@@ -96,18 +101,20 @@ section article {
   box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
 }
 
-article:hover {
-  border-left: 3px solid #ec571c;
-}
-
-input[type="checkbox"]:checked + article {
-  opacity: .5;
-}
-
 input[type="checkbox"]:checked::after {
   color: #fff;
   font-weight: bold;
   content: "X";
+}
+
+article:hover {
+  border-left: 3px solid #ec571c;
+}
+
+// hide section on select
+input[type="checkbox"]:checked + article,
+input[type="checkbox"]:checked + section {
+  opacity: .5;
 }
 
 /* Experimental */
