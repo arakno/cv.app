@@ -110,18 +110,24 @@ window.addEventListener('DOMContentLoaded', () => {
       // section.nextElementSibling.insertAdjacentHTML('beforeend', Experience)
       // console.dir(evt.target.id)
     }
+    setupDnD()
   })
 
   // Drag n Drop functionality
-  const experienceList = cv.querySelector('.experience')
-  Sortable.create(experienceList, { 
-    animation: 150 
-  })
+  function setupDnD() {
+    const experienceList = cv.querySelector('.experience')
+    Sortable.create(experienceList, { 
+      animation: 150 
+    })
 
-  const educationList = cv.querySelector('.education')
-  Sortable.create(educationList, { 
-    animation: 150 
-  })
+    const educationList = cv.querySelector('.education')
+    Sortable.create(educationList, { 
+      animation: 150 
+    })
+
+  }
+
+  setupDnD()
 
 
   // TODO: Add localStorage with localforage?

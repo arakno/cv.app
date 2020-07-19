@@ -2,7 +2,8 @@
 
 const uid = new Date().getTime()
 
-export const Experience = `<input type="checkbox">
+export const Experience = `<div class="experience">
+<input type="checkbox">
 <article draggable="true" class="grid gs16" id="Experience-${uid}">
 
                                 <div class="grid--cell">
@@ -16,7 +17,7 @@ export const Experience = `<input type="checkbox">
                                                 4v2h2V8H8zm-4 4v2h2v-2H4zm8
                                                 0v2h2v-2h-2zm0-4v2h2V8h-2z"></path></svg></div>
                                     <div class="g-center cv-logo">
-                                        <img src="https://via.placeholder.com/48" role="img" class="cv-image
+                                        <img src="http://placehold.it/48" role="img" class="cv-image
                                             js-list-img anonymizable" title="placeholder" onerror="handleListImageError(this)" >
                                     </div>
                                 </div>
@@ -32,30 +33,31 @@ export const Experience = `<input type="checkbox">
 																				<a contenteditable="true" href="" rel="nofollow" title="..." target="_blank">Company</a>
 																		</h4>
 
-                                    <div class="grid--cell mb8">
+                                    <div class="grid--cell mb8" contenteditable="true">
                                         <span class="fs-caption fc-black-700">From → To</span>
                                         <span class="fs-caption fc-black-500">(Duration)</span>
                                     </div>
-
+<!--
                                     <div class="mtn8 mb16">
                                         <div class="timeline-item-tags g-col
                                             g-row fl-none ff-row-wrap mt16">
                                             <span class="post-tag">Tech tag</span>
                                         </div>
                                     </div>
-
+//-->
                                     <div class="fs-body1 fc-black-700">
                                         <p contenteditable="true">Description...<div><br></div></p>
                                     </div>
                                 </div>
-														</article>`
+                                                        </article>
+                                                        </div>`
 														
 	export const Education = `<input type="checkbox">
 	<article class="grid gs16 first" id="Education-${uid}">
 
 	<div class="grid--cell">
 			<div class="g-center cv-logo">
-				<img src="https://via.placeholder.com/48" role="img" class="cv-image" title="placeholder" onerror="handleListImageError(this)">
+				<img src="http://placehold.it/48" role="img" class="cv-image" title="placeholder" onerror="handleListImageError(this)">
 			</div>
 	</div>
 
