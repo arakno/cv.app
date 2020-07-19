@@ -14327,7 +14327,8 @@ article:hover {
   border-left: 3px solid #ec571c;
 }
 
-input[type=checkbox]:checked + article {
+input[type=checkbox]:checked + article,
+input[type=checkbox]:checked + section {
   opacity: 0.5;
 }
 

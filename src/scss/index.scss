@@ -107,7 +107,8 @@ article:hover {
 }
 
 // hide section on select
-input[type="checkbox"]:checked + article {
+input[type="checkbox"]:checked + article,
+input[type="checkbox"]:checked + section {
   opacity: .5;
 }
 
