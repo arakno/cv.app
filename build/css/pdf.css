@@ -29,7 +29,7 @@
 .post-tag:hover, .moderator-tag:hover, .required-tag:hover, .disliked-tag:hover, .company-tag:hover, .geo-tag:hover {
   text-decoration: none;
 }
-<style>
+
 .timeline-public * {
   box-sizing: border-box;
 }

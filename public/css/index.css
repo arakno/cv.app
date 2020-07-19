@@ -14294,11 +14294,20 @@ section article {
 }
 
 @media print {
-  input[type=checkbox], input[type=checkbox]:checked + article {
+  input[type=checkbox] {
+    display: none;
+  }
+
+  input[type=checkbox] + section {
     display: none;
   }
 
   button.add-btn, #print-btn {
+    display: none;
+  }
+
+  input[type=checkbox]:checked + article,
+input[type=checkbox]:checked + section {
     display: none;
   }
 }
