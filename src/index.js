@@ -3,7 +3,7 @@ import Sortable from 'sortablejs'
 // TODO: look for alternative
 // import holderjs from 'http://unpkg.com/holderjs' 
 
-import { Experience, Education } from './templates'
+import { Experience, Education, Certification, Paper, Reading, Volunteer } from './templates'
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -57,9 +57,13 @@ window.addEventListener('DOMContentLoaded', () => {
   // Add visible/hidden checkboxes to each experience
 	for (let experience of experiences) {
     let input = document.createElement('input')
+    let label = document.createElement('label')
     input.type = 'checkbox'
+    input.id = 'selected-section'
+    label.for = 'selected-section'
     // experience.insertBefore(input, experience)
     // experience.prepend(input)
+    // input.appendChild(label)
     experience.parentNode.insertBefore(input, experience)
   }
   
@@ -72,29 +76,31 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const printBtn = document.getElementById('print-btn')
   printBtn.on('click', () => {
-    const primaryCSS = document.createElement('link')
-    primaryCSS.href = `${PATHS.css}stacks.css`
-    primaryCSS.rel = 'stylesheet'
-    primaryCSS.type = 'text/css'
-    const secondaryCSS = document.createElement('link')
-    secondaryCSS.href = `${PATHS.css}primary.css`
-    secondaryCSS.rel = 'stylesheet'
-    secondaryCSS.type = 'text/css'
-    const tertiaryCSS = document.createElement('link')
-    tertiaryCSS.href = `${PATHS.css}pdf.css`
-    tertiaryCSS.media = 'print'
-    tertiaryCSS.rel = 'stylesheet'
-    tertiaryCSS.type = 'text/css'
+    // const primaryCSS = document.createElement('link')
+    // primaryCSS.href = `${PATHS.css}index.css`
+    // primaryCSS.rel = 'stylesheet'
+    // primaryCSS.media = 'print'
+    // primaryCSS.type = 'text/css'
+    // const secondaryCSS = document.createElement('link')
+    // secondaryCSS.href = `${PATHS.css}primary.css`
+    // secondaryCSS.rel = 'stylesheet'
+    // secondaryCSS.type = 'text/css'
+    // const tertiaryCSS = document.createElement('link')
+    // tertiaryCSS.href = `${PATHS.css}pdf.css`
+    // // tertiaryCSS.media = 'print'
+    // tertiaryCSS.rel = 'stylesheet'
+    // tertiaryCSS.type = 'text/css'
 
-    const doc = document.getElementById('print_frame').contentWindow.document;
-    doc.head.appendChild(primaryCSS);
-    doc.head.appendChild(secondaryCSS);
-    doc.head.appendChild(tertiaryCSS);
-    doc.body.innerHTML = document.getElementById('cv').innerHTML
+    // const doc = document.getElementById('print_frame').contentWindow.document;
+    // doc.head.appendChild(primaryCSS);
+    // doc.head.appendChild(secondaryCSS);
+    // doc.head.appendChild(tertiaryCSS);
+    // doc.body.innerHTML = document.getElementById('cv').innerHTML
 
     setTimeout(() => {
-      window.frames['print_frame'].focus();
-      window.frames['print_frame'].print();
+      // window.frames['print_frame'].focus();
+      // window.frames['print_frame'].print();
+      window.print()
     }, 500)
   })
 
@@ -106,22 +112,66 @@ window.addEventListener('DOMContentLoaded', () => {
 
     if (evt.target.classList.contains('add-btn')) {
       let section = evt.target.closest('section')
-      section.insertAdjacentHTML('beforeend', Experience)
+
+      switch(section.id) {
+        case 'cv-Experience':
+          section.insertAdjacentHTML('beforeend', Experience)
+          break;
+        case 'cv-Education':
+          section.insertAdjacentHTML('beforeend', Education)
+          break;
+        case 'cv-Certifications':
+          section.insertAdjacentHTML('beforeend', Certification)
+          break;
+        case 'papers':
+          section.insertAdjacentHTML('beforeend', Paper)
+          break;
+        case 'readings':
+          section.insertAdjacentHTML('beforeend', Reading)
+          break;
+        case 'volunteer':
+          section.insertAdjacentHTML('beforeend', Volunteer)
+          break;
+        default:
+          break;
+      }
       // section.nextElementSibling.insertAdjacentHTML('beforeend', Experience)
       // console.dir(evt.target.id)
     }
+    
   })
 
   // Drag n Drop functionality
-  const experienceList = cv.querySelector('.experience')
-  Sortable.create(experienceList, { 
-    animation: 150 
-  })
+  function setupDnD() {
+    const experienceList = cv.querySelector('.experience')
+    Sortable.create(experienceList, { 
+      animation: 150 
+    })
 
-  const educationList = cv.querySelector('.education')
-  Sortable.create(educationList, { 
-    animation: 150 
-  })
+    const educationList = cv.querySelector('.education');
+    Sortable.create(educationList, { 
+      animation: 150 
+    })
+
+    // for ( el of experienceList) {
+    //   // function (a) {
+    //     Sortable.create(el, {group: 'photo',animation: 150 });
+    //   // });
+    // }
+    
+    // [].forEach.call( educationList, function (el) {
+    //     Sortable.create(el, {group: 'photo',animation: 150 });
+    //   });
+
+  }
+    
+//   $(document).on('click', '.add-el', function(){
+//     var n = $('.list img').length + 1;
+//     var template = `<img src="http://placehold.it/50x50&text=${n}">`;
+//     list.append(template);
+// });
+
+  setupDnD()
 
 
   // TODO: Add localStorage with localforage?
