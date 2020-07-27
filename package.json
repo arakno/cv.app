@@ -8,7 +8,8 @@
   "email": "pbasto@arakno.net",
   "author": "pbasto",
   "scripts": {
-    "start": "snowpack dev --port 3000",
+    "start": "node server.js",
+    "dev": "snowpack dev --port 3000",
     "build": "rm -rf build/ && snowpack build",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "format": "prettier --write \"src/**/*.js\"",
