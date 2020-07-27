@@ -1,6 +1,0 @@
-{
-  "imports": {
-    "print-js": "./print-js.js",
-    "sortablejs": "./sortablejs.js"
-  }
-}

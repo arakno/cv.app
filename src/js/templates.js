@@ -1,4 +1,7 @@
-const UID = new Date().getTime();
+// import holder from 'holderjs'
+
+const UID = new Date().getTime()
+
 export const Experience = `<div class="experience">
 <input type="checkbox">
 <article draggable="true" class="grid gs16" id="Experience-${UID}">
@@ -47,7 +50,8 @@ export const Experience = `<div class="experience">
                                 </div>
                                                         </article>
                                                         </div>`;
-export const Education = `<div class="education">
+														
+    export const Education = `<div class="education">
     <input type="checkbox">
 	<article class="grid gs16 first" id="Education-${UID}">
 
@@ -77,6 +81,8 @@ export const Education = `<div class="education">
 	</div>
 </article>
 </div>`;
+
+
 export const Certification = `<div class="certification">
 <input type="checkbox">
 <article class="grid gs16 first"
@@ -132,6 +138,8 @@ export const Certification = `<div class="certification">
                             </article>
 
                         </div>`;
+
+
 export const Paper = `<div class="paper">
                             <article class="grid gs16 last" id="Public
                                 Artifacts-606077">
@@ -172,7 +180,10 @@ export const Paper = `<div class="paper">
                                 </div>
                             </article>
 
-                        </div>`;
+                        </div>`
+
+
+
 export const Reading = `<div class="reading">      
                         <article class="mb24
                             js-hidden-item d-none">
@@ -187,7 +198,9 @@ export const Reading = `<div class="reading">
                             <h3 class="mb0 fs-body2 fc-black-500">Paul
                                 Graham</h3>
                         </article>
-                    </div>`;
+                    </div>`
+
+
 export const Volunteer = `<div class="volunteer">    
                         <article class="grid gs16 first last" contenteditable="true">
 
@@ -219,4 +232,4 @@ export const Volunteer = `<div class="volunteer">
                             </div>
                         </div>
                     </article>                              
-                              </div>`;
+                              </div>`

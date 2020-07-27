@@ -9,7 +9,8 @@
   "author": "pbasto",
   "scripts": {
     "start": "node server.js",
-    "dev": "snowpack dev --port 3000",
+    "https": "npm start -- --secure",
+    "dev": "cp -r src/js/* public/js && snowpack dev --port 3000",
     "build": "rm -rf build/ && snowpack build",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "format": "prettier --write \"src/**/*.js\"",

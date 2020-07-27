@@ -1,4 +1,4 @@
-import print from 'print-js';
+// import print from 'print-js';
 import Sortable from 'sortablejs'
 // TODO: look for alternative
 // import holderjs from 'http://unpkg.com/holderjs' 
