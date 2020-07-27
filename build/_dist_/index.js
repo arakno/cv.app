@@ -1,6 +1,6 @@
 import print from "https://cv.arakno.net/web_modules/print-js.js";
 import Sortable from "https://cv.arakno.net/web_modules/sortablejs.js";
-import {Experience, Education, Certification} from "./templates.js";
+import {Experience, Education, Certification, Paper, Reading, Volunteer} from "./templates.js";
 window.addEventListener("DOMContentLoaded", () => {
   const PATHS = {
     css: "./css/"
@@ -60,7 +60,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     if (evt.target.classList.contains("add-btn")) {
       let section = evt.target.closest("section");
-      console.log(section);
       switch (section.id) {
         case "cv-Experience":
           section.insertAdjacentHTML("beforeend", Experience);
@@ -70,6 +69,15 @@ window.addEventListener("DOMContentLoaded", () => {
           break;
         case "cv-Certifications":
           section.insertAdjacentHTML("beforeend", Certification);
+          break;
+        case "papers":
+          section.insertAdjacentHTML("beforeend", Paper);
+          break;
+        case "readings":
+          section.insertAdjacentHTML("beforeend", Reading);
+          break;
+        case "volunteer":
+          section.insertAdjacentHTML("beforeend", Volunteer);
           break;
         default:
           break;
