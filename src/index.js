@@ -3,7 +3,7 @@ import Sortable from 'sortablejs'
 // TODO: look for alternative
 // import holderjs from 'http://unpkg.com/holderjs' 
 
-import { Experience, Education, Certification } from './templates'
+import { Experience, Education, Certification, Paper, Reading, Volunteer } from './templates'
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -112,7 +112,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     if (evt.target.classList.contains('add-btn')) {
       let section = evt.target.closest('section')
-console.log(section)
 
       switch(section.id) {
         case 'cv-Experience':
@@ -123,6 +122,15 @@ console.log(section)
           break;
         case 'cv-Certifications':
           section.insertAdjacentHTML('beforeend', Certification)
+          break;
+        case 'papers':
+          section.insertAdjacentHTML('beforeend', Paper)
+          break;
+        case 'readings':
+          section.insertAdjacentHTML('beforeend', Reading)
+          break;
+        case 'volunteer':
+          section.insertAdjacentHTML('beforeend', Volunteer)
           break;
         default:
           break;

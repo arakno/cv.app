@@ -17,8 +17,7 @@ export const Experience = `<div class="experience">
                                                 4v2h2V8H8zm-4 4v2h2v-2H4zm8
                                                 0v2h2v-2h-2zm0-4v2h2V8h-2z"></path></svg></div>
                                     <div class="g-center cv-logo">
-                                        <img src="http://placehold.it/48" role="img" class="cv-image
-                                            js-list-img anonymizable" title="placeholder" onerror="handleListImageError(this)" >
+                                        <img src="http://placehold.it/48" title="placeholder">
                                     </div>
                                 </div>
 
@@ -139,3 +138,98 @@ export const Certification = `<div class="certification">
                             </article>
 
                         </div>`;
+
+
+export const Paper = `<div class="paper">
+                            <article class="grid gs16 last" id="Public
+                                Artifacts-606077">
+
+                                <div class="grid--cell">
+                                    <div class="g-center cv-logo-blank"><svg
+                                            aria-hidden="true" class="svg-icon
+                                            iconDocument" width="18" height="18"
+                                            viewBox="0 0 18 18"><path d="M3 3a2
+                                                2 0 0 1 2-2h6l4 4v10a2 2 0 0 1-2
+                                                2H5a2 2 0 0
+                                                1-2-2V3zm7-1.5V6h4.5L10 1.5z"></path></svg></div>
+                                </div>
+
+                                <div class="grid--cell fl1 fd-column">
+                                    <h3 class="grid--cell mb2 fs-subheading">
+                                        <a
+                                            href="https://www.academia.edu/6148289/Clinical_Safety_and_Holistic_Hygiene"
+                                            rel="nofollow" title="Clinical
+                                            Safety and Holistic Hygiene | Paulo
+                                            Basto - Academia.edu"
+                                            target="_blank">Clinical Safety and
+                                            Holistic Hygiene | Paulo Basto -
+                                            Academia.edu</a>
+                                    </h3>
+
+
+
+                                    <div class="mtn8 mb16">
+
+                                    </div>
+
+                                    <div class="fs-body1 fc-black-700">
+                                        <p>Academia.edu helps academics follow
+                                            the latest research.</p>
+
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>`
+
+
+
+export const Reading = `<div class="reading">      
+                        <article class="mb24
+                            js-hidden-item d-none">
+
+                            <h2 class="mb2 fs-subheading fc-black-800">
+                                <a
+                                    href="http://www.amazon.com/Hackers-Painters-Big-Ideas-Computer/dp/1449389554%3FSubscriptionId%3DAKIAIIBINOD46VC3JCLQ%26tag%3Dstackoverfl08-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1449389554"
+                                    rel="nofollow" target="_blank">Hackers
+                                    &amp; Painters: Big Ideas from the
+                                    Computer Age</a>
+                            </h2>
+                            <h3 class="mb0 fs-body2 fc-black-500">Paul
+                                Graham</h3>
+                        </article>
+                    </div>`
+
+
+export const Volunteer = `<div class="volunteer">    
+                        <article class="grid gs16 first last" contenteditable="true">
+
+                        <div class="grid--cell">
+                            <div class="g-center cv-logo-blank">
+                            <img src="http://placehold.it/48" title="placeholder">
+                            </div>
+                        </div>
+
+                        <div class="grid--cell fl1 fd-column">
+                            <h3 class="grid--cell mb2 fs-subheading
+                                fc-black-800">
+                                Bombeiros Voluntários de Mafra
+                            </h3>
+
+                            <h4 class="grid--cell mb8 fs-body2
+                                fc-black-500">Firefighter</h4>
+                            <div class="grid--cell mb8">
+                                <span class="fs-caption fc-black-700">
+                                    Jan 2010 → Jan 2011
+                                  </span>
+                            </div>
+                            <div class="mtn8 mb16">
+                                <div class="timeline-item-tags g-col
+                                    g-row fl-none ff-row-wrap mt16">
+                                    <span class="post-tag">Disaster</span>
+                                    <span class="post-tag">Humanitarian Relief</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>                              
+                              </div>`
