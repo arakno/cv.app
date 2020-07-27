@@ -1,5 +1,7 @@
 // import print from 'print-js';
+// TODO: sort out sortable :)
 import Sortable from 'sortablejs'
+// import holderjs from  'https://unpkg.com/sortable@2.0.0/index.js'
 // TODO: look for alternative
 // import holderjs from 'http://unpkg.com/holderjs' 
 
