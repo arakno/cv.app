@@ -19,9 +19,9 @@
     "run:css::watch": "$1 --watch"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "bulma": "^0.9.0",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "holderjs": "^2.9.7",
     "localforage": "^1.7.4",
     "morgan": "^1.10.0",
